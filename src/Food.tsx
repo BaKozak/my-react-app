@@ -1,14 +1,14 @@
 
 function Food() {
 
-    const food1 = "Kimchi";
-    const food2 = "Bulgogi";
+    const food1 = "Bulgogi Dish";
+    const food2 = "Korean Soup";
 
     return (
         <ul>
-            <li>Rice</li>
+            <h1>Favourite Food</h1>
             <li>{food1}</li>
-            <li>{food2.toUpperCase()}</li>
+            <li>{food2}</li>
         </ul>
     );
 }
