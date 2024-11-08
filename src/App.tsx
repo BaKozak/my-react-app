@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <Header />
-      <UserGreeting isLoggedIn={true} username="BaKozak" />
-      <Student name="BK" age={26} isStudent={false} />
+      <UserGreeting isLoggedIn={true} username="Reactor" />
+      <Student name="Ractor" age={26} isStudent={false} />
       <Student />
       <Card />
       <Button />
