@@ -8,7 +8,7 @@ function MyComponent() {
     const [isEmployed, setIsEmployed] = useState(false);
 
     const updateName = () => {
-        setName("Reactor");
+        setName("Reactor"); 
     }
 
     const incrementAge = () => {

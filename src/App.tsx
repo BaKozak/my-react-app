@@ -9,6 +9,8 @@ import ProfilePicture from "./ProfilePicture";
 import Footer from "./Footer";
 import MyComponent from "./MyComponent";
 import MyComponent2 from "./MyComponent2";
+import MyComponent3 from "./MyComponent3";
+import MyComponent4 from "./MyComponent4";
 import Counter from "./Counter";
 import ColorPicker from "./ColorPicker";
 
@@ -40,6 +42,8 @@ function App() {
       <MyComponent />
       <Counter />
       <MyComponent2 />
+      <MyComponent3 />
+      <MyComponent4 />
       <ColorPicker />
       <Footer />
     </>
