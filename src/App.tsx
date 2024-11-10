@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import MyComponent from "./MyComponent";
 import MyComponent2 from "./MyComponent2";
 import Counter from "./Counter";
+import ColorPicker from "./ColorPicker";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
       <MyComponent />
       <Counter />
       <MyComponent2 />
+      <ColorPicker />
       <Footer />
     </>
   );
