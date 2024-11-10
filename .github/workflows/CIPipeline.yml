@@ -4,7 +4,7 @@ on: push
 
 jobs:
   setup-project:
-    name: Lint code base
+    name: Pipeline test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,8 +21,7 @@ jobs:
       - name: Run Development Server
         run: |
             npm run dev &
-            SERVER_PID=$!
             sleep 10
 
       - name: Stop Development Server
-        run: kill $SERVER_PID 
+        run: kill $(lsof -t -i:5173)
