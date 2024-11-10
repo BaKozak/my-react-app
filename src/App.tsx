@@ -12,7 +12,7 @@ import MyComponent2 from "./MyComponent2";
 import MyComponent3 from "./MyComponent3";
 import MyComponent4 from "./MyComponent4";
 import MyComponent5 from "./MyComponent5";
-import Counter from "./Counter";
+import Counter from "./Counter/Counter";
 import ColorPicker from "./ColorPicker";
 
 function App() {
