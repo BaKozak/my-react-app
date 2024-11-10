@@ -7,6 +7,9 @@ import UserGreeting from "./UserGreeting";
 import List from "./List/List";
 import ProfilePicture from "./ProfilePicture";
 import Footer from "./Footer";
+import MyComponent from "./MyComponent";
+import MyComponent2 from "./MyComponent2";
+import Counter from "./Counter";
 
 function App() {
 
@@ -30,10 +33,12 @@ function App() {
       {/*<Student name="Ractor" age={26} isStudent={false} />*/}
       {/*<Food />*/}
       <Card />
-      <ProfilePicture/>
+      <ProfilePicture />
       {fruits.length > 0 && <List items={fruits} category="Fruits" />}
       {vegetables.length > 0 && <List items={vegetables} category="Vegetables" />}
-
+      <MyComponent />
+      <Counter />
+      <MyComponent2 />
       <Footer />
     </>
   );
