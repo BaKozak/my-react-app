@@ -18,12 +18,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Cypress run
+      - name: Cypress e2e tests
         uses: cypress-io/github-action@v6
         with:
           build: npm run build
           start: npm start
           wait-on: http://localhost:5173
+      
+      - name: Cypress component tests
+        uses: cypress-io/github-action@v6
+        with:
+            command: cy:run:component
 
       - name: Stop Development Server
         run: kill $(lsof -t -i:5173)
