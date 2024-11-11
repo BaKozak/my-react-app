@@ -28,7 +28,7 @@ jobs:
       - name: Cypress component tests
         uses: cypress-io/github-action@v6
         with:
-            command: cy:run:component
+            command: npx cypress run --component
 
       - name: Stop Development Server
         run: kill $(lsof -t -i:5173)
