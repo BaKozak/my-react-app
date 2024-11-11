@@ -78,8 +78,14 @@
   background-color: hsl(197, 100%, 45%);
 }
 
-.body {
+body {
   font-family: Arial, sans-serif;
+  background-image: url(assets/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
 }
 
 .color-picker-container {
@@ -123,4 +129,28 @@ input[type="color"] {
   padding: 5px;
   border-radius: 10px;
   border: 3px solid hsl(0, 0%, 80%);
+}
+
+.clock {
+  color: white;
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.75);
+
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock-container {
+  width: 100vw;
+  padding: 10px 0;
+}
+
+.box-component {
+  border: 3px solid;
+  padding: 25px;
 }
