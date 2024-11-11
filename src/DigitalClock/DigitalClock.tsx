@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import stylesDigitalClock from './DigitalClock.module.css'
 
 function DigitalClock() {
 
@@ -30,8 +31,8 @@ function DigitalClock() {
     }
 
     return (
-        <div className="clock-container">
-            <div className="clock">
+        <div className={stylesDigitalClock["clock-container"]}>
+            <div className={stylesDigitalClock["clock"]}>
                 <span>{formatTime()}</span>
             </div>
         </div>)

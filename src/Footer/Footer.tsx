@@ -1,8 +1,9 @@
+import stylesFooter from './Footer.module.css'
 
 function Footer() {
     return (
-        <footer>
-            <p>&copy; {new Date().getFullYear()} Your website name</p>
+        <footer className={stylesFooter["footer"]}>
+            <p className={stylesFooter["text"]}>&copy; {new Date().getFullYear()} BaKozak website</p>
         </footer>
     );
 }

@@ -1,15 +1,19 @@
+import { Link } from "react-router-dom";
+import stylesHeader from './Header.module.css'
 
 function Header() {
 
     return (
-        <header className="header">
+        <header className={stylesHeader["header"]}>
             <h1>My first react website</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><Link to={"/"}>Home</Link></li>
+                    <li><Link to={"/profile"}>Profile</Link></li>
+                    <li><Link to={"/clock"}>Digital Clock</Link></li>
+                    <li><Link to={"/counter"}>Counter</Link></li>
+                    <li><Link to={"/stop-watch"}>Stop Watch</Link></li>
+                    <li><Link to={"/todo-list"}>Todo List</Link></li>
                 </ul>
             </nav>
             <hr></hr>

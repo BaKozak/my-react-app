@@ -1,23 +1,23 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Header from "./Header/Header";
-import Food from "./Food/Food";
-import Card from "./Card/Card";
-import Button from "./Button/Button";
-import Student from "./Student/Student";
-import UserGreeting from "./UserGreeting/UserGreeting";
-import List from "./List/List";
-import ProfilePicture from "./ProfilePicture/ProfilePicture";
-import Footer from "./Footer/Footer";
-import MyComponent from "./MyComponent/MyComponent";
-import MyComponent2 from "./MyComponent/MyComponent2";
-import MyComponent3 from "./MyComponent/MyComponent3";
-import MyComponent4 from "./MyComponent/MyComponent4";
-import MyComponent5 from "./MyComponent/MyComponent5";
+import Home from './Home/Home';
+import Profile from './Profile/Profile';
 import DigitalClock from "./DigitalClock/DigitalClock";
 import Counter from "./Counter/Counter";
+import StopWatch from "./StopWatch/StopWatch";
+
+import Food from "./Food/Food";
+import List from "./List/List";
+import Footer from "./Footer/Footer";
+
+
+import Button from "./Button/Button";
+import UserGreeting from "./UserGreeting/UserGreeting";
+import ProfilePicture from "./ProfilePicture/ProfilePicture";
 import ColorPicker from "./ColorPicker/ColorPicker";
 import ToDoList from "./ToDoList/ToDoList";
 import ComponentA from "./ComponentsABCD/ComponentA";
-import StopWatch from "./StopWatch/StopWatch";
 
 function App() {
 
@@ -38,31 +38,35 @@ function App() {
     <>
       <Header />
 
-      <StopWatch />
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+
+        <Route path="/clock" element={<DigitalClock />} />
+        <Route path="/counter" element={<Counter />} />
 
 
-      <Footer />
+      </Routes>
+      <ColorPicker />
 
-      {/* <ToDoList /> */}
-
-      {/* <DigitalClock /> */}
-
-      {/* <ComponentA /> */}
-
-      {/* <UserGreeting isLoggedIn={true} username="Reactor" />
-      {<Student name="Ractor" age={26} isStudent={false} />}
       {<Food />}
-      <Card />
-      <ProfilePicture />
       {fruits.length > 0 && <List items={fruits} category="Fruits" />}
       {vegetables.length > 0 && <List items={vegetables} category="Vegetables" />}
-      <MyComponent />
+
+      {/* <ToDoList />
+
+      <DigitalClock />
+
+      <ComponentA />
+
+      <UserGreeting isLoggedIn={true} username="Reactor" />
+      
+      <ProfilePicture />
       <Counter />
-      <MyComponent2 />
-      <MyComponent3 />
-      <MyComponent4 />
-      <MyComponent5 />
       <ColorPicker /> */}
+
+      <Footer />
     </>
   );
 }

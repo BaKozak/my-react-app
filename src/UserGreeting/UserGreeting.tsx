@@ -1,16 +1,17 @@
+import stylesUserGreetings from './UserGreetings.module.css'
 
-function UserGreeting({username = "Guest", isLoggedIn}: UserProps) {
+function UserGreeting({ username = "Guest", isLoggedIn }: UserProps) {
 
-    const welcomeMessage =  <h2 className="welcome-message">
-                            Welcome {username}
-                            </h2>;
+    const welcomeMessage = <h2 className={stylesUserGreetings["welcome-message"]}>
+        Welcome {username}
+    </h2>;
 
-    const loginPrompt =     <h2 className="login-prompt">
-                            Please log in to continue
-                            </h2>;
+    const loginPrompt = <h2 className={stylesUserGreetings["login-prompt"]}>
+        Please log in to continue
+    </h2>;
 
-    return (isLoggedIn ?  welcomeMessage :
-                                loginPrompt)
+    return (isLoggedIn ? welcomeMessage :
+        loginPrompt)
 
 }
 

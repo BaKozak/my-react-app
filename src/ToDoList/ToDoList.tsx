@@ -1,5 +1,5 @@
 import { BaseSyntheticEvent, useState } from "react"
-import styles from './ToDoList.module.css'
+import stylesToDoList from './ToDoList.module.css'
 
 function ToDoList() {
 
@@ -45,7 +45,7 @@ function ToDoList() {
     }
 
     return (
-        <div className={styles["to-do-list"]}>
+        <div className={stylesToDoList["to-do-list"]}>
             <h1>todo List</h1>
 
             <div>
@@ -55,7 +55,7 @@ function ToDoList() {
                     value={newTask}
                     onChange={handleInputChange} />
 
-                <button className={styles["add-button"]}
+                <button className={stylesToDoList["add-button"]}
                     onClick={addTask}>
                     Add
                 </button>
@@ -66,19 +66,19 @@ function ToDoList() {
                     <li key={index}>
                         <span className="text">{task} </span>
                         <button
-                            className={styles["delete-button"]}
+                            className={stylesToDoList["delete-button"]}
                             onClick={() => deleteTask(index)}
                         >
                             Delete
                         </button>
                         <button
-                            className={styles["move-button"]}
+                            className={stylesToDoList["move-button"]}
                             onClick={() => moveTaskUp(index)}
                         >
                             Up
                         </button>
                         <button
-                            className={styles["move-button"]}
+                            className={stylesToDoList["move-button"]}
                             onClick={() => moveTaskDown(index)}
                         >
                             Down
