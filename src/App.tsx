@@ -1,8 +1,8 @@
 import Header from "./Header";
-//import Food from "./Food";
+import Food from "./Food";
 import Card from "./Card/Card";
-//import Button from "./Button/Button";
-//import Student from "./Student";
+import Button from "./Button/Button";
+import Student from "./Student";
 import UserGreeting from "./UserGreeting";
 import List from "./List/List";
 import ProfilePicture from "./ProfilePicture";
@@ -14,6 +14,7 @@ import MyComponent4 from "./MyComponent4";
 import MyComponent5 from "./MyComponent5";
 import Counter from "./Counter";
 import ColorPicker from "./ColorPicker";
+import ToDoList from "./ToDoList/ToDoList";
 
 function App() {
 
@@ -32,10 +33,12 @@ function App() {
 
   return (
     <>
-      <Header />
+      <ToDoList />
+
+      {/* <Header />
       <UserGreeting isLoggedIn={true} username="Reactor" />
-      {/*<Student name="Ractor" age={26} isStudent={false} />*/}
-      {/*<Food />*/}
+      {<Student name="Ractor" age={26} isStudent={false} />}
+      {<Food />}
       <Card />
       <ProfilePicture />
       {fruits.length > 0 && <List items={fruits} category="Fruits" />}
@@ -47,7 +50,7 @@ function App() {
       <MyComponent4 />
       <MyComponent5 />
       <ColorPicker />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
