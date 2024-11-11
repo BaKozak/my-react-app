@@ -1,20 +1,20 @@
-import Header from "./Header";
-import Food from "./Food";
+import Header from "./Header/Header";
+import Food from "./Food/Food";
 import Card from "./Card/Card";
 import Button from "./Button/Button";
-import Student from "./Student";
-import UserGreeting from "./UserGreeting";
+import Student from "./Student/Student";
+import UserGreeting from "./UserGreeting/UserGreeting";
 import List from "./List/List";
-import ProfilePicture from "./ProfilePicture";
-import Footer from "./Footer";
-import MyComponent from "./MyComponent";
-import MyComponent2 from "./MyComponent2";
-import MyComponent3 from "./MyComponent3";
-import MyComponent4 from "./MyComponent4";
-import MyComponent5 from "./MyComponent5";
-import DigitalClock from "./DigitalClock";
-import Counter from "./Counter";
-import ColorPicker from "./ColorPicker";
+import ProfilePicture from "./ProfilePicture/ProfilePicture";
+import Footer from "./Footer/Footer";
+import MyComponent from "./MyComponent/MyComponent";
+import MyComponent2 from "./MyComponent/MyComponent2";
+import MyComponent3 from "./MyComponent/MyComponent3";
+import MyComponent4 from "./MyComponent/MyComponent4";
+import MyComponent5 from "./MyComponent/MyComponent5";
+import DigitalClock from "./DigitalClock/DigitalClock";
+import Counter from "./Counter/Counter";
+import ColorPicker from "./ColorPicker/ColorPicker";
 import ToDoList from "./ToDoList/ToDoList";
 import ComponentA from "./ComponentsABCD/ComponentA";
 import StopWatch from "./StopWatch/StopWatch";
@@ -36,10 +36,12 @@ function App() {
 
   return (
     <>
+      <Header />
 
       <StopWatch />
 
 
+      <Footer />
 
       {/* <ToDoList /> */}
 
@@ -47,8 +49,7 @@ function App() {
 
       {/* <ComponentA /> */}
 
-      {/* <Header />
-      <UserGreeting isLoggedIn={true} username="Reactor" />
+      {/* <UserGreeting isLoggedIn={true} username="Reactor" />
       {<Student name="Ractor" age={26} isStudent={false} />}
       {<Food />}
       <Card />
@@ -61,8 +62,7 @@ function App() {
       <MyComponent3 />
       <MyComponent4 />
       <MyComponent5 />
-      <ColorPicker />
-      <Footer /> */}
+      <ColorPicker /> */}
     </>
   );
 }
