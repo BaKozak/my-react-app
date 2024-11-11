@@ -5,7 +5,7 @@ export const UserContext = createContext("");
 
 function ComponentA() {
 
-    const [user, setUser] = useState("Reactor");
+    const [user, _] = useState("Reactor");
 
 
     return (

@@ -1,4 +1,3 @@
-import React from 'react'
 import StopWatch from './StopWatch'
 
 describe('<StopWatch />', () => {

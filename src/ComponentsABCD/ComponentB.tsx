@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ComponentC from "./ComponentC";
 
 function ComponentB() {
