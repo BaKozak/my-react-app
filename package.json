@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "vite preview --port 5173",
-    "cy:run:component": "cypress run --component"
+    "cy:run:component": "npx cypress run --component"
   },
   "dependencies": {
     "react": "^18.3.1",
