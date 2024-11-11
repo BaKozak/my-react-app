@@ -1,17 +1,29 @@
-name: Cypress Tests
+name: CI Pipeline
 
 on: push
 
 jobs:
-  cypress-run:
-    runs-on: ubuntu-22.04
+  setup-project-and-run-cypress:
+    name: Pipeline
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
           build: npm run build
           start: npm start
+          wait-on: http://localhost:5173
+
+      - name: Stop Development Server
+        run: kill $(lsof -t -i:5173)
