@@ -3,8 +3,8 @@ name: CI Pipeline
 on: push
 
 jobs:
-  setup-project:
-    name: Pipeline test
+  setup-project-and-run-cypress:
+    name: Pipeline
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -22,6 +22,13 @@ jobs:
         run: |
             npm run dev &
             sleep 10
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm start
+          browser: chrome
 
       - name: Stop Development Server
         run: kill $(lsof -t -i:5173)
