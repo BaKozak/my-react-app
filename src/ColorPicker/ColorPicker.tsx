@@ -18,6 +18,7 @@ function ColorPicker() {
 
         <label>Select a color</label>
         <input type="color" value={color} onChange={handleColorChange} />
+        <br/>
     </div>)
 }
 
