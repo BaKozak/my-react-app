@@ -46,7 +46,7 @@ function ToDoList() {
 
     return (
         <div className={stylesToDoList["to-do-list"]}>
-            <h1>todo List</h1>
+            <h1>My TODO List</h1>
 
             <div>
                 <input
@@ -63,8 +63,8 @@ function ToDoList() {
 
             <ol>
                 {tasks.map((task, index) =>
-                    <li key={index}>
-                        <span className="text">{task} </span>
+                    <li className={stylesToDoList["todo-list-entry"]} key={index}>
+                        <span className={stylesToDoList["text"]}>{task} </span>
                         <button
                             className={stylesToDoList["delete-button"]}
                             onClick={() => deleteTask(index)}

@@ -42,17 +42,22 @@ function App() {
 
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
-
+        <Route path="/todo-list" element={<ToDoList />} />  
+        {// For some reason breaks my header css
+        }
         <Route path="/clock" element={<DigitalClock />} />
         <Route path="/counter" element={<Counter />} />
+        <Route path="/stop-watch" element={<StopWatch />} />
+        <Route path="/other" element={<StopWatch />} />
+        
+
 
 
       </Routes>
-      <ColorPicker />
 
-      {<Food />}
+      {/* {<Food />}
       {fruits.length > 0 && <List items={fruits} category="Fruits" />}
-      {vegetables.length > 0 && <List items={vegetables} category="Vegetables" />}
+      {vegetables.length > 0 && <List items={vegetables} category="Vegetables" />} */}
 
       {/* <ToDoList />
 
