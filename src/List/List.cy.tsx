@@ -1,6 +1,6 @@
 import List from './List'
 
-describe('<List />', () => {
+describe('List Component', () => {
   it('should render List with no category and no children elements', () => {
     const category: string = "No category"
 

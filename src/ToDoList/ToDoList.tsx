@@ -56,6 +56,7 @@ function ToDoList() {
                     onChange={handleInputChange} />
 
                 <button className={stylesToDoList["add-button"]}
+                    data-cy="add-button"
                     onClick={addTask}>
                     Add
                 </button>
@@ -63,22 +64,25 @@ function ToDoList() {
 
             <ol data-cy="todo-task-list">
                 {tasks.map((task, index) =>
-                    <li className={stylesToDoList["todo-list-entry"]} key={index}>
+                    <li className={stylesToDoList["todo-list-entry"]} key={index} data-cy={`list-entry-number-${index + 1}`}>
                         <span className={stylesToDoList["text"]}>{task}</span>
                         <button
                             className={stylesToDoList["delete-button"]}
+                            data-cy="entry-delete-button"
                             onClick={() => deleteTask(index)}
                         >
                             Delete
                         </button>
                         <button
                             className={stylesToDoList["move-button"]}
+                            data-cy="entry-move-up-button"
                             onClick={() => moveTaskUp(index)}
                         >
                             Up
                         </button>
                         <button
                             className={stylesToDoList["move-button"]}
+                            data-cy="entry-move-down-button"
                             onClick={() => moveTaskDown(index)}
                         >
                             Down
