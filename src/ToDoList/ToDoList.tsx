@@ -64,7 +64,7 @@ function ToDoList() {
             <ol data-cy="todo-task-list">
                 {tasks.map((task, index) =>
                     <li className={stylesToDoList["todo-list-entry"]} key={index}>
-                        <span className={stylesToDoList["text"]}>{task} </span>
+                        <span className={stylesToDoList["text"]}>{task}</span>
                         <button
                             className={stylesToDoList["delete-button"]}
                             onClick={() => deleteTask(index)}

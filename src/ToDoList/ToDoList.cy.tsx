@@ -9,7 +9,7 @@ describe('Todo List component', () => {
     cy.mount(<ToDoList />)
   });
 
-  context('Default state tests', () => {
+  context.skip('Default state tests', () => {
     it('should check if header of component is correct', () => {
       cy.get('[data-cy="todo-title"]')
         .should('be.visible')
@@ -43,7 +43,7 @@ describe('Todo List component', () => {
     });
   });
 
-  context.only('State manipulation tests', () => {
+  context('State manipulation tests', () => {
     const newTaskName = "Write cypress tests"
 
     it('should be able to input text in input field and store as value', () => {
@@ -63,19 +63,22 @@ describe('Todo List component', () => {
         cy.get('button').eq(1).should('have.text', 'Up');
         cy.get('button').eq(2).should('have.text', 'Down');
       });
+    });
 
-      it('should be able to remove a todo task using the delete button', () => {
+    it('should be able to remove a todo task using the delete button', () => {
+      cy.get('[data-cy="todo-task-list"] button').contains('Delete').click();
+      cy.get('[data-cy="todo-task-list"]').children().should('have.length', listOfDefaultItems.length - 1);
+      cy.get('[data-cy="todo-task-list"] span').first().should('have.text', listOfDefaultItems[1]);
+    });
 
-      });
+    it('should be able to move up a todo task using the up button', () => {
+      cy.get('[data-cy="todo-task-list"]').children().eq(1).contains('button', 'Up').click();
+      cy.get('[data-cy="todo-task-list"] span').first().should('have.text', listOfDefaultItems[1]);
+    });
 
-      it('should be able to move up a todo task using the up button', () => {
-
-      });
-
-      it('should be able to move down a todo task using the down button', () => {
-
-      });
-
+    it('should be able to move down a todo task using the down button', () => {
+      cy.get('[data-cy="todo-task-list"]').children().first().contains('button', 'Down').click();
+      cy.get('[data-cy="todo-task-list"] span').eq(1).should('have.text', listOfDefaultItems[0]);
     });
   });
 });
