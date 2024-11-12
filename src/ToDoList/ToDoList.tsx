@@ -68,21 +68,21 @@ function ToDoList() {
                         <span className={stylesToDoList["text"]}>{task}</span>
                         <button
                             className={stylesToDoList["delete-button"]}
-                            data-cy="entry-delete-button"
+                            data-cy="delete-button"
                             onClick={() => deleteTask(index)}
                         >
                             Delete
                         </button>
                         <button
                             className={stylesToDoList["move-button"]}
-                            data-cy="entry-move-up-button"
+                            data-cy="move-up-button"
                             onClick={() => moveTaskUp(index)}
                         >
                             Up
                         </button>
                         <button
                             className={stylesToDoList["move-button"]}
-                            data-cy="entry-move-down-button"
+                            data-cy="move-down-button"
                             onClick={() => moveTaskDown(index)}
                         >
                             Down

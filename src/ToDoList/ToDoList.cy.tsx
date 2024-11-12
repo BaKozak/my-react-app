@@ -28,16 +28,16 @@ describe('Todo List component', () => {
         .should('have.text', 'Add');
     });
 
-    it.only('should check if default state of List is correct', () => {
+    it('should check if default state of List is correct', () => {
       cy.get('[data-cy="todo-task-list"]').children().should('have.length', listOfDefaultItems.length);
 
       cy.get('[data-cy="todo-task-list"]').children().each((item, index) => {
         cy.wrap(item).within(() => {
           cy.get('span').should('include.text', listOfDefaultItems[index]);
           cy.get('button').should('have.length', 3);
-          cy.get('[data-cy="entry-delete-button"]').should('have.text', 'Delete').and('be.visible');
-          cy.get('[data-cy="entry-move-up-button"]').should('have.text', 'Up').and('be.visible');
-          cy.get('[data-cy="entry-move-down-button"]').should('have.text', 'Down').and('be.visible');
+          cy.get('[data-cy="delete-button"]').should('have.text', 'Delete').and('be.visible');
+          cy.get('[data-cy="move-up-button"]').should('have.text', 'Up').and('be.visible');
+          cy.get('[data-cy="move-down-button"]').should('have.text', 'Down').and('be.visible');
         });
       });
     });
@@ -63,7 +63,7 @@ describe('Todo List component', () => {
     });
 
     it('should be able to remove a todo task using the delete button', () => {
-      cy.get('[data-cy="todo-task-list"] button').contains('Delete').click();
+      cy.get('[data-cy="todo-task-list"] [data-cy="delete-button"]').first().click();
       cy.get('[data-cy="todo-task-list"]').children().should('have.length', listOfDefaultItems.length - 1);
       cy.get('[data-cy="todo-task-list"] span').first().should('have.text', listOfDefaultItems[1]);
     });
