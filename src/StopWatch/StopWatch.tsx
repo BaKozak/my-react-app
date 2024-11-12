@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import styles from './StopWatch.module.css'
+import stylesStopWatch from './StopWatch.module.css'
 
 function StopWatch() {
 
@@ -52,12 +52,12 @@ function StopWatch() {
     }
 
     return (
-        <div className={styles["stop-watch"]}>
-            <div className={styles["display"]}> {formatTime()}</div>
-            <div className={styles["controls"]}>
-                <button onClick={start} className={styles["start-button"]}>Start</button>
-                <button onClick={stop} className={styles["stop-button"]}>Stop</button>
-                <button onClick={reset} className={styles["reset-button"]}>Reset</button>
+        <div className={stylesStopWatch["stop-watch"]}>
+            <div className={stylesStopWatch["display"]}> {formatTime()}</div>
+            <div className={stylesStopWatch["controls"]}>
+                <button onClick={start} className={stylesStopWatch["start-button"]}>Start</button>
+                <button onClick={stop} className={stylesStopWatch["stop-button"]}>Stop</button>
+                <button onClick={reset} className={stylesStopWatch["reset-button"]}>Reset</button>
             </div>
         </div>)
 }

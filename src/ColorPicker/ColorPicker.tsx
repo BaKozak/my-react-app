@@ -1,4 +1,5 @@
 import { useState } from "react"
+import stylesColorPickerContainer from './ColorPickerContainer.module.css'
 
 
 function ColorPicker() {
@@ -9,14 +10,15 @@ function ColorPicker() {
         setColor(event.target.value)
     }
 
-    return (<div className="color-picker-container">
+    return (<div className={stylesColorPickerContainer["color-picker-container"]}>
         <h1>Color Picker</h1>
-        <div className="color-display" style={{ backgroundColor: color }}>
+        <div className={stylesColorPickerContainer["color-display"]} style={{ backgroundColor: color }}>
             <p>Selected color: {color}</p>
         </div>
 
         <label>Select a color</label>
         <input type="color" value={color} onChange={handleColorChange} />
+        <br/>
     </div>)
 }
 

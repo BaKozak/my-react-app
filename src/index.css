@@ -1,83 +1,3 @@
-.header {
-  grid-auto-flow: column;
-  gap: 15px;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.header ul {
-  text-align: center;
-}
-
-.header ul li {
-  display: inline;
-  margin-right: 15px;
-}
-
-.student {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  padding: 10px;
-  border: 1px solid hsl(0, 0%, 50%, 0.8);
-  max-width: 250px;
-  margin: 20px;
-}
-
-.student p {
-  margin: 0;
-}
-
-.welcome-message {
-  font-size: 2.5em;
-  background-color: hsla(120, 100%, 50%, 0.541);
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid hsl(0, 0%, 50%, 0.8);
-  max-width: fit-content;
-  margin: 0;
-}
-
-.login-prompt {
-  font-size: 2.5em;
-  background-color: hsla(339, 100%, 50%, 0.595);
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid hsl(0, 0%, 50%, 0.8);
-  max-width: fit-content;
-  margin: 0;
-}
-
-.counter-container {
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-.count-display {
-  font-size: 10em;
-  margin-top: 0;
-  margin-bottom: 50px;
-}
-
-.counter-button {
-  width: 150px;
-  height: 50px;
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: 0px 5px;
-  background-color: hsl(197, 100%, 55%);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer
-}
-
-.counter-button:hover {
-  background-color: hsl(197, 100%, 45%);
-}
-
 body {
   font-family: Arial, sans-serif;
   background-image: url(assets/background.jpg);
@@ -86,35 +6,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
-}
-
-.color-picker-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h1 {
-  margin: 50px;
-  font-size: 3rem;
-}
-
-.color-display {
-  width: 350px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid hsl(0, 1%, 15%);
-  border-radius: 25px;
-  margin-bottom: 25px;
-  transition: 0.25 ease;
-}
-
-.color-display p {
-  color: hsl(0, 0%, 20%);
-  font-size: 2rem;
-  text-align: center;
 }
 
 label {
@@ -129,28 +20,4 @@ input[type="color"] {
   padding: 5px;
   border-radius: 10px;
   border: 3px solid hsl(0, 0%, 80%);
-}
-
-.clock {
-  color: white;
-  font-size: 6rem;
-  font-weight: bold;
-  font-family: monospace;
-  text-align: center;
-  text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.75);
-
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  align-items: center;
-}
-
-.clock-container {
-  width: 100vw;
-  padding: 10px 0;
-}
-
-.box-component {
-  border: 3px solid;
-  padding: 25px;
 }
