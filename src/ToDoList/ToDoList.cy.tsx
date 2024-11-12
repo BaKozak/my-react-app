@@ -35,9 +35,9 @@ describe('Todo List component', () => {
         cy.wrap(item).within(() => {
           cy.get('span').should('include.text', listOfDefaultItems[index]);
           cy.get('button').should('have.length', 3);
-          cy.get('button').eq(0).should('have.text', 'Delete');
-          cy.get('button').eq(1).should('have.text', 'Up');
-          cy.get('button').eq(2).should('have.text', 'Down');
+          cy.get('[data-cy="delete-button"]').should('have.text', 'Delete').and('be.visible');
+          cy.get('[data-cy="move-up-button"]').should('have.text', 'Up').and('be.visible');
+          cy.get('[data-cy="move-down-button"]').should('have.text', 'Down').and('be.visible');
         });
       });
     });
@@ -47,26 +47,23 @@ describe('Todo List component', () => {
     const newTaskName = "Write cypress tests"
 
     it('should be able to input text in input field and store as value', () => {
-      cy.get('[data-cy="task-input-section"] input').type(newTaskName);
+      cy.get('[data-cy="task-input-section"]').type(newTaskName);
       cy.get('[data-cy="task-input-section"] input').should('have.value', newTaskName);
     });
 
     it('should be able to add a todo task using add button', () => {
-      cy.get('[data-cy="task-input-section"] input').type(newTaskName);
+      cy.get('[data-cy="task-input-section"]').type(newTaskName);
       cy.get('[data-cy="task-input-section"] button').click();
 
       cy.get('[data-cy="todo-task-list"]').children().should('have.length', listOfDefaultItems.length + 1);
       cy.get('[data-cy="todo-task-list"]').children().last().within(() => {
         cy.get('span').should('include.text', newTaskName);
         cy.get('button').should('have.length', 3);
-        cy.get('button').eq(0).should('have.text', 'Delete');
-        cy.get('button').eq(1).should('have.text', 'Up');
-        cy.get('button').eq(2).should('have.text', 'Down');
       });
     });
 
     it('should be able to remove a todo task using the delete button', () => {
-      cy.get('[data-cy="todo-task-list"] button').contains('Delete').click();
+      cy.get('[data-cy="todo-task-list"] [data-cy="delete-button"]').first().click();
       cy.get('[data-cy="todo-task-list"]').children().should('have.length', listOfDefaultItems.length - 1);
       cy.get('[data-cy="todo-task-list"] span').first().should('have.text', listOfDefaultItems[1]);
     });

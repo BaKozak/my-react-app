@@ -8,7 +8,7 @@ function List(props: ListProps) {
     const listItems = itemList.length > 0
         ? itemList.map(
             (item: Item) =>
-                <li key={item.id}>
+                <li key={item.id} data-cy={`${item.name.toLowerCase()}-option`}>
                     {item.name}: {item.calories}
                 </li>)
         : null;
