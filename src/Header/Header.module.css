@@ -1,0 +1,22 @@
+.header {
+  grid-auto-flow: column;
+  gap: 15px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header h1 {
+  margin: 30px;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.header ul {
+  text-align: center;
+}
+
+.header ul li {
+  display: inline;
+  margin-right: 15px;
+}

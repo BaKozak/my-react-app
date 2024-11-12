@@ -1,0 +1,25 @@
+.color-picker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    border-bottom: 2px solid
+}
+
+.color-display {
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid hsl(0, 1%, 15%);
+    border-radius: 25px;
+    margin-bottom: 25px;
+    transition: 0.25 ease;
+}
+
+.color-display p {
+    color: hsl(0, 0%, 20%);
+    font-size: 2rem;
+    text-align: center;
+}

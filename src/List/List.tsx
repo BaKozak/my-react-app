@@ -1,4 +1,4 @@
-import styles from './List.module.css'
+import stylesList from './List.module.css'
 
 function List(props: ListProps) {
 
@@ -14,8 +14,8 @@ function List(props: ListProps) {
 
     return (
         <>
-            <h3 className={styles["list-category"]}>{category}</h3>
-            <ol className={styles["list-items"]}>{listItems}</ol>
+            <h3 className={stylesList["list-category"]}>{category}</h3>
+            <ol className={stylesList["list-items"]}>{listItems}</ol>
         </>)
 }
 
