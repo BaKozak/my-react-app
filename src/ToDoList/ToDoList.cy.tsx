@@ -9,7 +9,7 @@ describe('Todo List component', () => {
     cy.mount(<ToDoList />)
   });
 
-  context.skip('Default state tests', () => {
+  context('Default state tests', () => {
     it('should check if header of component is correct', () => {
       cy.get('[data-cy="todo-title"]')
         .should('be.visible')
