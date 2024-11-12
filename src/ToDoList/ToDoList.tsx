@@ -45,10 +45,10 @@ function ToDoList() {
     }
 
     return (
-        <div className={stylesToDoList["to-do-list"]}>
-            <h1>My TODO List</h1>
+        <div className={stylesToDoList["todo-list-component"]}>
+            <h1 data-cy="todo-title">My TODO List</h1>
 
-            <div>
+            <div data-cy="task-input-section">
                 <input
                     type="text"
                     placeholder="Enter a task..."
@@ -61,10 +61,10 @@ function ToDoList() {
                 </button>
             </div>
 
-            <ol>
+            <ol data-cy="todo-task-list">
                 {tasks.map((task, index) =>
                     <li className={stylesToDoList["todo-list-entry"]} key={index}>
-                        <span className={stylesToDoList["text"]}>{task} </span>
+                        <span className={stylesToDoList["text"]}>{task}</span>
                         <button
                             className={stylesToDoList["delete-button"]}
                             onClick={() => deleteTask(index)}
