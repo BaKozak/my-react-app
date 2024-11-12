@@ -46,7 +46,7 @@ describe('<List />', () => {
     });
   });
 
-  it.only('should render List with defined category and children elements', () => {
+  it('should render List with defined category and children elements', () => {
     const category: string = "Vegetables"
 
     const vegetables: any = [
