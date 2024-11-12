@@ -6,8 +6,8 @@ function Other() {
 
     const fruits: any = [
         { id: 1, name: "Apple", calories: 95 },
-        { id: 3, name: "Orange", calories: 45 },
         { id: 2, name: "Banana", calories: 105 },
+        { id: 3, name: "Orange", calories: 45 },
     ];
 
     const vegetables: any = [
