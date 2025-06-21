@@ -66,6 +66,5 @@ describe('List Component', () => {
       expect(item.text()).to.deep.equal(`${vegetables[index].name}: ${vegetables[index].calories}`);
     });
   });
-  DUPA
 
 })
